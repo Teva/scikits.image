@@ -55,6 +55,7 @@ class BackendManager(object):
             unlisted: boolean, optional
                 Omit backend from listing (used in testing).
         """
+        print "register", module, backend, source, functions
         if not backend:
             raise ValueError("Specify backend name.")
         if not module:
@@ -86,7 +87,7 @@ class BackendManager(object):
         if not unlisted:
             if backend_name not in scikits.image.backends:
                 scikits.image.backends.append(backend_name)
-            
+        print self.backend_listing 
     def _scan_backends(self):
         """
         Scans through the source tree to extract all available backends from file names.
@@ -173,8 +174,10 @@ class BackendManager(object):
             function: function type 
                 Queried function.
         """
-        module_name = function.__module__
+        #module_name = function.__module__
+        module_name = ".".join(function.__module__.split('.')[:3])
         backends = []
+        print "BACK", module_name
         if module_name in self.backend_listing:
             for backend in self.backend_listing[module_name]:
                 if function.__name__ in self.backend_listing[module_name][backend]:
