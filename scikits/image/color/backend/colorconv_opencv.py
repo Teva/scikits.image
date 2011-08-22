@@ -23,7 +23,7 @@ def hsv2rgb(hsv):
 
 def rgb2xyz(rgb):
     xyz = np.empty_like(rgb)
-    cv.CvtColor(hsv, xyz, cv.CV_RGB2XYZ)
+    cv.CvtColor(rgb, xyz, cv.CV_RGB2XYZ)
     return xyz
 
 
