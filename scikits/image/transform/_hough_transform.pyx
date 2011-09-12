@@ -78,7 +78,7 @@ def _probabilistic_hough(np.ndarray img, int value_threshold, int line_length, \
     # calculate thetas if none specified
     if theta is None:
         theta = np.linspace(math.pi/2, -math.pi/2, 180)
-        theta =  math.pi/2-np.arange(180)/180.0* math.pi
+        theta =  math.pi/2-np.arange(180)/180.0 * math.pi
     ctheta = np.cos(theta)
     stheta = np.sin(theta)
     cdef int height = img.shape[0]
