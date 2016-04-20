@@ -11,7 +11,7 @@ def threshold_adaptive(image, block_size, method='gaussian', offset=0,
 
     Also known as local or dynamic thresholding where the threshold value is the
     weighted mean for the local neighborhood of a pixel subtracted by a
-    constant. Alternatively the threshold can be determined dynamically by a
+    constant. Alternatively the threshold can be determined dynamically by 
     a given function using the 'generic' method.
 
     Parameters
