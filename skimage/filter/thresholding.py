@@ -25,8 +25,7 @@ def threshold_adaptive(image, block_size, method='gaussian', offset=0,
         Method used to determine adaptive threshold for local neighbourhood in
         weighted mean image.
          * 'generic': use custom function (see `param` parameter)
-         * 'gaussian': apply gaussian filter (see `param` parameter for custom
-                       sigma value)
+         * 'gaussian': apply gaussian filter (see `param` parameter for custom sigma value)
          * 'mean': apply arithmetic mean filter
          * 'median' apply median rank filter
         By default the 'gaussian' method is used.
